@@ -1,0 +1,25 @@
+sup{
+    font-size: 11px;
+}
+
+img {
+    width: 320px;
+}
+
+.title {
+    text-align: right; /* Вирівнює текст заголовка праворуч */
+}
+
+.left {
+    float: left; /* Вирівнює зображення ліворуч */
+    margin-right: 10px; /* Додає відступ праворуч від зображення */
+}
+
+.left-align {
+    text-align: left; /* Вирівнює текст по лівому краю */
+}
+
+div{
+    display: block;
+    color: white;
+}

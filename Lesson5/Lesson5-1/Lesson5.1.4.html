@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    body{
+      background-color: gray;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .circle{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border-top: 10px solid yellow;
+      border-right: 10px solid cornflowerblue;
+      border-bottom: 10px solid orange;
+      border-left: 10px solid lightskyblue;
+      animation: preloader 3s infinite ease alternate;
+    }
+    @keyframes preloader{
+      from{
+        transform: rotate(360deg);
+      }
+      to{
+        transform: rotate(-360deg) scale(1.5);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="circle"></div>
+</body>
+</html>
