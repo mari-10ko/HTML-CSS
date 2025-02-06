@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .flex{
+            height: 500px;
+            background-color: peachpuff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            background-color: #e30808;
+            transition: 2s;
+        }
+        .circle:hover{
+            border-radius: 50%;
+            background-color: #9c9a9a;
+            transition: 1.5s;
+        }
+    </style>
 </head>
 <body>
-
+<div class="flex">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
 </body>
 </html>

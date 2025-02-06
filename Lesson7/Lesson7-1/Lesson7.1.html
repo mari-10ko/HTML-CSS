@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 132px;
+    }
+    .card{
+        width: 319px;
+        height: 492px;
+        background: #D9D9D94D;
+        border: 4px solid #554C4C;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: white;
+        border: 4px solid #554C4C;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -50px;
+    }
+    .card h3{
+        font-family: "Inter", sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: normal;
+        color: #000000;
+    }
+    .card p{
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: normal;
+        font-style: normal;
+        text-align: center;
+        color: #000000;
+        width: 256.8px;
+    }
+    .green-border{
+        border: 4px solid #65856E;
+    }
+  </style>
 </head>
 <body>
-$END$
+<div class="card">
+  <div class="logo">
+      <img src="Logos/Ds3%20Tool.png" alt="Tool">
+  </div>
+    <h3>Lorem</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+</div>
+<div class="card green-border">
+    <div class="logo green-border">
+        <img src="Logos/Chessboard.png" alt="Chessboard">
+    </div>
+    <h3>Lorem</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+</div>
+<div class="card">
+    <div class="logo">
+        <img src="Logos/Battle.png" alt="Battle">
+    </div>
+    <h3>Lorem</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+</div>
 </body>
 </html>

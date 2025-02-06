@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 2%;
+        }
+        header{
+            height: 60vh;
+            background-color: #3b66c5;
+        }
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2% 0;
+        }
+        section{
+            height: 50vh;
+            width: 32%;
+            background-color: #1b3d7a;
+        }
+        footer{
+            height: 90vh;
+            background-color: #3b66c5;
+        }
+        header, section, footer{
+            color: rgba(255, 255, 255, 0.69);
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: serif;
+        }
+        .text{
+            font-size: 80px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<header><p class="text">Widgets</p></header>
+<div class="wrapper">
+    <section><p>Big Widgets</p></section>
+    <section><p>Bigger Widgets</p></section>
+    <section><p>Huge Widgets</p></section>
+</div>
+<footer><p class="text">Contact</p></footer>
 </body>
 </html>

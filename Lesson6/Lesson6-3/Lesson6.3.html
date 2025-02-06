@@ -1,10 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .login-box {
+            background: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            padding: 20px 38px;
+            width: 310px;
+            text-align: center;
+        }
+        .logo {
+            font-family: 'Billabong', cursive;
+            font-size: 45px;
+            color: #262626;
+            margin-bottom: 20px;
+        }
+        .login-form input {
+            width: 90%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .btn-login {
+            width: 90%;
+            padding: 8px;
+            background-color: #3897f0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .btn-facebook {
+            width: 100%;
+            padding: 10px;
+            background: none;
+            color: #3897f0;
+            border: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        .btn-facebook img {
+            width: 16px;
+            height: 16px;
+        }
+        .separator {
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 1px;
+            color: #8e8e8e;
+        }
+        .separator span {
+            display: inline-block;
+            padding-top: 2px;
+            font-size: 14px;
+        }
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background-color: #dbdbdb;
+        }
+        .forgot-password {
+            font-size: 12px;
+            color: #00376b;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+        .signup-box {
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #dbdbdb;
+            background-color: #fafafa;
+            border-radius: 8px;
+            padding: 10px 20px;
+            width: 350px;
+        }
+        .signup-link {
+            color: #3897f0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="login-container">
+    <div class="login-box">
+        <h1 class="logo">Instagram</h1>
+        <form class="login-form">
+            <input type="text" placeholder="Номер телефону, ім'я користувача або email">
+            <input type="password" placeholder="Пароль">
+            <button class="btn-login">Увійти</button>
+            <div class="separator">
+                <span>АБО</span>
+            </div>
+            <button class="btn-facebook">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAdVBMVEU7WZj///9DYJs/Xps1U5XW3eowUZRfdKdccqfR1ubEzN1KZZ/p7PM3Vpa7w9j7+/2yvNODlLz09vmLmbwrTZJpfaxuga7j5/BQaaFcdKTS2eEUQIy6xdKImrhziq9SbaJ3ibMgRo+irciYpMKrtc99krO0vs9lB6QaAAAD4klEQVR4nO3dYXOaQBCA4YscIOCBwiGkaStR2v//E6tp0g9JYW8XwT1m3w+dzGQwPBPgkDtT9fQcqVWks1J9e3n0Xtyrl+/qh330Ttwr+1PF5tE7ca/MSW0evQ/3a7MmTCAYpgmGa4LhmmC4JhiuCYZrguGaYLgmmLkyWkfX7HtvX9/+ibQ2xuFRBR/MzaCy+NgdqvcOh67rjnW8bbNA6dv39fhL8MCY6PU1OFZ9moTNrvzX7lrThGGSpvm+P1+qdvzXwwFjbLSt8qQpn0YryvIw/vD18RgdZYcUgrzHHKOjtgrdJNwxxgaX0FXCHBPZLkFQWGNs1jsfYMwxJqqTAmdhi9FR1yApbDHaVDu0hSnGKIqFJ8ZokoUnhnK+cMVELWak5I0xdk+zcMTYA9HCEBNlyHGfM+aVepAxxNiadFVmiTFRTraww9gj/RfDDWNMj71V5ouJYtzbMdYYXZGvy+wwOthPOMq4YWLiXRlLDO3WnyXGBGfnU6b4GjNMmzpByl2Y5vn+S/X4k/OFMU6nTJn0Vd1e7xU+Z4FpjWUx+ujwDjO8bJW10W1K5nPAyy+MOYDnf5HWOiKugV34anYBz/8kplIWxhjVQ5bmCMyOjbUsZgPd/pdnNWGZ9bKYDLoyN/WUDyYsi2mhW+Y8m3CULYvRJwBTnl1myAdbFrMFxsyymvTxl2Ux0A3ArlsRJpx0/guGHIi5Dv9TXp8ZZiuYjwRDTTCIBENNMIgEQ00wiARDTTCIBENNMIi4YaY8NpsFY/RAFnrUlGzt0La3HjGlsckG2tQQpg6Gts2ytg0Wxxh1SQcDZjTK4S2v5cAs4CyYCSt9nsZWCeyOwOWBG2asELrW+YRJoSkCnzB5sCLMHprv8AlzhgYajzBlBd0eeISBJ288wjTQmOkTJoxXhEnaFWHyYPm75rkwBTjMeIQpLyvC7CpwvYNHmA58S+0PBh5mPMLAw4xHGHiY8QdT5Jv1XADKMzhmeoSBhxmPMOC7GY8wLkvRvMG4LEX1BuMyQeANJoWHGW8wxR4eZvzB9OCExiwY07/9xaj/Bu3y4IY7l0XCc8zPtM/xQB204LTbDm3qcJTNM3P25SNJf3ObORvY1uUHc5vTXNUErWA+Egw1wSASDDXBIBIMNcEgEgw1wSASDDXBIBIMNcEgEgw1wSASDDXBIBIMNcEgEgw1wSASDDXBIBIMNcEgEgw1wSASDDXBIBIMNcEgEgw1wSASDDXBIBIMNcEgEgw1wSASDDXBIBIMNcEgWhVmo05T/l8RXDNjTKZ+2bvtLNTMGPtTpS9321momTEvv1VxmvRXRTHNizGq/ANrCVyZvaooyQAAAABJRU5ErkJggg=="
+                     alt="Facebook">
+                Увійти через Facebook
+            </button>
+            <a href="#" class="forgot-password">Забули пароль?</a>
+        </form>
+    </div>
+    <div class="signup-box">
+        <p>Не маєте облікового запису? <a href="#" class="signup-link">Зареєструйтеся</a></p>
+    </div>
+</div>
 </body>
 </html>
